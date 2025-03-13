@@ -4,14 +4,9 @@
   box-sizing: border-box;
   font-family: "arial", Poppins, sans-serif;
 }
-body {
-  text-align: center;
-  height: 100vh;
-  width:100vw;
-}
 #container {
-  min-height: 100%;
-  max-width:100%;
+  min-height: 100vh;
+  max-width:100vw;
   background-color: blueviolet;
   display: flex;
   flex-direction: column;
