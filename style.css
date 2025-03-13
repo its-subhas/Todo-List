@@ -23,16 +23,17 @@
    font-size: xxx-large;
  }
  .tasklist {
-   display: grid;
-   grid-template-columns: 200px 150px 100px;
+   display: flex;
+  flex-direction: row;
    justify-content: center;
    align-items: center;
    text-align: center;
-   min-gap: 10px;
+   gap: 10px;
    margin: 50px 0 10px 0;
  }
  #input {
    height: 40px;
+    width: 200px;
    padding: 5px;
    border-radius: 5px;
    border: 2px solid black;
@@ -44,6 +45,7 @@
  }
  #date {
    height: 40px;
+     width: 150px;
    padding: 5px;
    border-radius: 5px;
    border: 2px solid black;
@@ -56,6 +58,7 @@
  }
  #add {
    height: 40px;
+     width: 100px;
    padding: 5px;
    border-radius: 5px;
    border: 2px solid black;
