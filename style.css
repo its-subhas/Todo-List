@@ -6,7 +6,8 @@
 }
 body {
   text-align: center;
-  height: 100vh;
+  background-color: blueviolet;
+/*   height: 100vh; */
 }
 #container {
   background-color: blueviolet;
