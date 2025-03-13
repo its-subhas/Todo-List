@@ -6,10 +6,11 @@
 }
 body {
   text-align: center;
-  background-color: blueviolet;
-/*   height: 100vh; */
+  background-color: red;
+
 }
 #container {
+  height: 100vh;
   background-color: blueviolet;
   display: flex;
   flex-direction: column;
