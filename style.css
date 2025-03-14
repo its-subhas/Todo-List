@@ -1,0 +1,483 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "arial", Poppins, sans-serif;
+}
+body {
+  text-align: center;
+}
+#container {
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+h1 {
+  margin-top: 30px;
+  text-align: center;
+  font-size: xxx-large;
+}
+.tasklist {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin: 50px 0 10px 0;
+}
+#input {
+  width: 200px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: #e8f313;
+  font-weight: bold;
+  font-size: medium;
+  text-align: start;
+  color: black;
+}
+#date {
+  width: 150px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: rgb(18, 227, 202);
+  font-weight: bold;
+  font-size: medium;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+}
+#add {
+  width: 100px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: rgb(29, 195, 29);
+  font-weight: bold;
+  font-size: medium;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+}
+#add:active {
+  transform: scale(0.95);
+}
+#tasklist {
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin: 50px 0 10px 0;
+}
+#spantask {
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: #e8f313;
+  font-size: small;
+  text-align: center;
+  color: black;
+  word-wrap: break-word;
+}
+#spandate {
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: rgb(18, 227, 202);
+  font-size: small;
+  text-align: center;
+  color: black;
+}
+#deletebutton {
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: rgb(217, 11, 11);
+  font-weight: bold;
+  font-size: medium;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+}
+#deletebutton:active {
+  transform: scale(0.95);
+}
+@media screen and (max-width: 490px) {
+  h1 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: xx-large;
+  }
+  .tasklist {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    margin: 40px 0 10px 0;
+  }
+  #input {
+    width: 170px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: small;
+    text-align: start;
+    color: black;
+  }
+  #date {
+    width: 120px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: small;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+  }
+  #add {
+    width: 70px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: small;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+  }
+  #add:active {
+    transform: scale(0.95);
+  }
+  #tasklist {
+    display: grid;
+    grid-template-columns: 170px 120px 70px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    margin: 40px 0 10px 0;
+  }
+  #spantask {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: small;
+    text-align: center;
+    color: black;
+    word-wrap: break-word;
+  }
+  #spandate {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: small;
+    text-align: center;
+    color: black;
+  }
+  #deletebutton {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: small;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 376px) {
+  h1 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: xx-large;
+  }
+  .tasklist {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    margin: 40px 0 10px 0;
+  }
+  #input {
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: small;
+    text-align: start;
+    color: black;
+  }
+  #date {
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: x-small;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+  }
+  #add {
+    width: 50px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: small;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+  }
+  #add:active {
+    transform: scale(0.95);
+  }
+  #tasklist {
+    display: grid;
+    grid-template-columns: 150px 100px 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    margin: 40px 0 10px 0;
+  }
+  #spantask {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: small;
+    text-align: center;
+    color: black;
+    word-wrap: break-word;
+  }
+  #spandate {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: small;
+    text-align: center;
+    color: black;
+  }
+  #deletebutton {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: small;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 321px) {
+  h1 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: x-large;
+  }
+  .tasklist {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3px;
+    margin: 30px 0 10px 0;
+  }
+  #input {
+    width: 130px;
+    height: 20px;
+    padding: 3px;
+    border-radius: 3px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: x-small;
+    text-align: start;
+    color: black;
+  }
+  #date {
+    width: 80px;
+    height: 20px;
+    padding: 3px;
+    border-radius: 3px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: xx-small;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+  }
+  #add {
+    width: 30px;
+    height: 20px;
+    padding: 3px;
+    border-radius: 3px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: x-small;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+  }
+  #add:active {
+    transform: scale(0.95);
+  }
+  #tasklist {
+    display: grid;
+    grid-template-columns: 130px 80px 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3px;
+    margin: 30px 0 10px 0;
+  }
+  #spantask {
+    padding: 3px;
+    border-radius: 3px;
+    border: 1px solid black;
+    font-size: x-small;
+    text-align: center;
+    color: black;
+    word-wrap: break-word;
+  }
+  #spandate {
+    padding: 3px;
+    border-radius: 3px;
+    border: 1px solid black;
+    font-size: xx-small;
+    text-align: center;
+    color: black;
+  }
+  #deletebutton {
+    padding: 3px;
+    border-radius: 3px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: 7px;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 250px) {
+  h1 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: large;
+  }
+  .tasklist {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3px;
+    margin: 20px 0 10px 0;
+  }
+  #input {
+    width: 110px;
+    height: 15px;
+    padding: 1px;
+    border-radius: 2px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: 4px;
+    text-align: start;
+    color: black;
+  }
+  #date {
+    width: 60px;
+    height: 15px;
+    padding: 1px;
+    border-radius: 2px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: 5px;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+  }
+  #add {
+    width: 20px;
+    height: 15px;
+    padding: 1px;
+    border-radius: 2px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: 4px;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+  }
+  #add:active {
+    transform: scale(0.95);
+  }
+  #tasklist {
+    display: grid;
+    grid-template-columns: 110px 60px 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3px;
+    margin: 20px 0 10px 0;
+  }
+  #spantask {
+    padding: 1.1px;
+    border-radius: 2px;
+    border: 1px solid black;
+    font-size: 10px;
+    text-align: center;
+    color: black;
+    word-wrap: break-word;
+  }
+  #spandate {
+    height: 15px;
+    padding: 1px;
+    border-radius: 2px;
+    border: 1px solid black;
+    font-size: 10.3px;
+    text-align: center;
+    color: black;
+  }
+  #deletebutton {
+    height: 15px;
+    padding: 1px;
+    border-radius: 2px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: 5px;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 196px) {
+  body {
+    background-color: blueviolet;
+  }
+}
